@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rastgele Bahane Üretici</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Rastgele Bahane Üretici</h1>
+        <p id="bahane">Tıkla ve bir bahane üret!</p>
+        <button onclick="bahaneUret()">Bahane Üret</button>
+    </div>
+
+    <script>
+        const bahaneler = [
+            "Trafik çok kötüydü!",
+            "İnternetim kesildi!",
+            "Kedim klavyenin üstüne yattı!",
+            "Komşunun kapısı kilitlenmiş, yardım etmek zorunda kaldım!",
+            "Telefonumun şarjı bitti ve ulaşamadım!",
+            "Çalar saatim çalmadı!",
+            "Evde su borusu patladı!",
+            "Yanlış otobüse bindim ve ters tarafa gittim!"
+        ];
+
+        function bahaneUret() {
+            const rastgeleBahane = bahaneler[Math.floor(Math.random() * bahaneler.length)];
+            document.getElementById("bahane").innerText = rastgeleBahane;
+        }
+    </script>
+</body>
+</html>
